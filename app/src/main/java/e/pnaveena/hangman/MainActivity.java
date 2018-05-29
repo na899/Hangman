@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     int score=0;
     int counter=0;
     int f=0;
-    
+
 
     public void guess(View view) {
         flag=0;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 counter++;
 
 
+
             }
 
 
@@ -81,8 +83,54 @@ public class MainActivity extends AppCompatActivity {
         if(flag==0)
             score++;
         D.setText(score+"");
+            if(score==1)
+            {
+                ImageView F=findViewById(R.id.h1);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==2)
+            {
+                ImageView F=findViewById(R.id.h2);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==3)
+            {
+                ImageView F=findViewById(R.id.h3);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==4)
+            {
+                ImageView F=findViewById(R.id.h4);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==5)
+            {
+                ImageView F=findViewById(R.id.h5);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==6)
+            {
+                ImageView F=findViewById(R.id.h6);
+                F.setVisibility(View.VISIBLE);
+            }
+            else  if(score==7)
+            {
+                ImageView F=findViewById(R.id.h7);
+                F.setVisibility(View.VISIBLE);
+            }
+            else if(score==8)
+            {
+                ImageView F=findViewById(R.id.h8);
+                F.setVisibility(View.VISIBLE);
+            }
+            else if(score==9)
+            {
+                ImageView F=findViewById(R.id.h9);
+                F.setVisibility(View.VISIBLE);
+            }
 
-        b=b+" "+letter.charAt(0);
+
+                b=b+" "+letter.charAt(0);
         A.setText(b  );
         B.setText("");
     }
