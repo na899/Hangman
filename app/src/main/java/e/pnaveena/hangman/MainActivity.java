@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     int flag=0;
     int score=0;
     int counter=0;
-    int f=0;
+
 
 
     public void guess(View view) {
@@ -141,12 +141,14 @@ public class MainActivity extends AppCompatActivity {
             TextView E=findViewById(R.id.bestScore);
        SharedPreferences sharedPreferences=getSharedPreferences("bestScore",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
+        int f=sharedPreferences.getInt("flag",0);
+
         int best =sharedPreferences.getInt("score",0);
             if (f == 0 || best > score) {
                 editor.putInt("score",score);
-                editor.commit();
-                f=1;
-                E.setText(score+"");
+                 editor.putInt("flag",1);
+                editor.commit(); 
+                 E.setText(score+"");
 
             }
 
