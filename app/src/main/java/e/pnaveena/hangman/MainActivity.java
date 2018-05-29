@@ -65,13 +65,14 @@ public class MainActivity extends AppCompatActivity {
         if(counter<words[index].length()){
 
             for (int i = 0; i < words[index].length(); i++) {
-             if (letter.charAt(0) == words[index].charAt(i)&&letter.charAt(0)!=a.charAt(2*i)) {
+
+             if (letter.charAt(0) == words[index].charAt(i))
+             {   flag=1;
+                 if(letter.charAt(0)!=a.charAt(2*i)) {
                 StringBuilder str = new StringBuilder(a);
                 str.setCharAt((2*i),words[index].charAt(i));
                 a=str.toString();
                 C.setText(a);
-                flag=1;
-
                 counter++;
 
 
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-        }
+        }}
         if(flag==0)
             score++;
         D.setText(score+"");
