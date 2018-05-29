@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/brown"
+    >
+
+
+    <TextView
+        android:id="@+id/titleBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Best score"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/darkBrown"
+        android:padding="5dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/titleScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="25dp"
+        android:text="  Score  "
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:background="@color/darkBrown"
+        android:padding="5dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/bestScore"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/titleBestScore"
+        android:layout_marginStart="30dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/titleScore"
+        android:layout_below="@+id/titleScore"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_alignRight="@+id/titleScore" />
+
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:background="@color/white"/>
+
+    <EditText
+        android:id="@+id/guessBox"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/word"
+        android:padding="10dp"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:onClick="guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guessBox"
+        android:layout_centerHorizontal="true"
+        android:text="GUESS"
+        android:background="#cd853f"
+        />
+
+    <TextView
+        android:id="@+id/titleGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:text="GUESSED LETTERS"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:background="@color/darkBrown"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/guessedLetters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_below="@id/titleGuess"
+        android:text="Enter a letter to start the game!"
+        android:textAlignment="center"
+        android:padding="10dp"/>
+
+
+</RelativeLayout>
